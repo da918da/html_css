@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../js/funcs.js" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //函式的回傳值
+      function subtraction(a, b) {
+        var result = a - b;
+        return result; // 回傳結果，並結束函式的執行
+        console.log("會執行到這行程式嗎"); // 不會執行
+      }
+      var my_num = subtraction(5, 2);
+      console.log("結果等於 " + my_num);
+      //   console.log(result); //why不能印result？？？因為result是在function大括號裡面
+
+      function count(i) {
+        setTimeout(function () {}, 1000);
+      }
+      count(10);
+
+      //倒數 10 秒
+      setTimeout(function () {
+        console.log("timeout");
+      }, 10000);
+      console.log("這裡會先執行");
+
+      //指定位數補0
+      function str_pad(my_num, digits) {
+        var my_num_str = my_num.toString(); // "7"
+        while (my_num_str.length < digits) {
+          // 3 < 3
+          my_num_str = "0" + my_num_str; // "007"
+        }
+
+        return my_num_str; // "007"
+      }
+
+      //var result = str_pad(9, 2);
+      //console.log(result);  // "09"
+
+      var result2 = str_pad(7, 3);
+      console.log(result2); // "007"
+
+      //throw：可自訂錯誤
+
+      function array_avg(my_arr) {
+        try {
+          if (!Array.isArray(my_arr)) {
+            //throw "資料格式不符合";
+            throw new Error("資料格式不符合");
+          }
+
+          for (let i = 0; i < my_arr.length; i++) {
+            if (typeof my_arr[i] !== "number")
+              throw new Error("某項資料不符合");
+          }
+
+          var total_score = 0;
+          for (let i = 0; i < my_arr.length; i++) {
+            total_score += my_arr[i];
+            //total_score = total_score + my_arr[i]; // 167
+          }
+          //console.log(total_score);
+          var average_score = total_score / my_arr.length;
+
+          var avg = average_score.toFixed(2);
+          return avg;
+        } catch (err) {
+          //console.log(err);
+          console.error(err);
+        }
+      }
+    </script>
+  </body>
+</html>

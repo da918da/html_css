@@ -1,0 +1,10 @@
+.footer {
+  margin: 0 auto;
+  /* border: 1px solid navy; */
+
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  min-width: 768px;
+}

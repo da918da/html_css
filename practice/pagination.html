@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .pagination_block {
+        /* border: 1px solid red; */
+        display: inline-block;
+      }
+      ul.number {
+        /* border: 1px solid black; */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        font-size: 0;
+      }
+      ul.number > li {
+        /* border: 1px solid green; */
+        display: inline-block;
+      }
+      li > a {
+        font-size: 16px;
+        text-decoration: none;
+        border: 1px solid blue;
+         border-left: 0;   /* 寫法一 */
+
+        display: inline-block;
+        text-align: center;
+        padding: 5px 10px;
+      }
+      /* 也可以這樣寫法二 li:not(:first-child) a
+      li:not(:first-child) a {
+        border-left: 0;*/
+      }
+      li:first-child > a {
+       border-radius: 5px 0 0 5px;
+       border-left: 1px solid blue;
+      }
+
+      /* li > a:first-child {
+        border-left: 1px solid #dee2e6;
+      } */
+
+      /* ul.number > li:last-child > a {
+        border-radius: 0 5px 5px 0;
+      } */
+    </style>
+  </head>
+
+  <body>
+    <div class="pagination_block">
+      <ul class="number">
+        <li>
+          <a href="#">&lt;</a>
+        </li>
+        <li>
+          <a href="#" class="om">1</a>
+        </li>
+        <li>
+          <a href="#">2</a>
+        </li>
+        <li>
+          <a href="#">3</a>
+        </li>
+        <li>
+          <a href="#">4</a>
+        </li>
+        <li>
+          <a href="#">5</a>
+        </li>
+        <!-- <li>
+          <a href="#">6</a>
+        </li>
+        <li>
+          <a href="#">7</a>
+        </li>
+        <li>
+          <a href="#">8</a>
+        </li>
+        <li>
+          <a href="#">9</a>
+        </li>
+        <li>
+          <a href="#">10</a>
+        </li> -->
+        <li>
+          <a href="#">&gt</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

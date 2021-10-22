@@ -1,0 +1,53 @@
+body {
+  margin: 0;
+}
+* {
+  box-sizing: border-box;
+}
+div.paper {
+  width: 700px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: orchid;
+}
+
+header.header {
+  margin: 0 auto 20px;
+}
+div.inside {
+  border: 1px solid rgb(14, 141, 61);
+  margin: 20px auto;
+  /* width: 700px; */
+  font-size: 0;
+}
+aside.aside {
+  border: 1px solid rgb(76, 0, 255);
+  width: 200px;
+  vertical-align: top;
+  font-size: 16px;
+  margin-right: 20px;
+}
+
+main.main {
+  border: 1px solid rgb(226, 197, 28);
+  font-size: 16px;
+  width: calc(100% - 200px - 20px);
+}
+
+aside.aside,
+main.main {
+  display: inline-block;
+  /* margin: 20px; */
+}
+
+footer.footer {
+  margin-top: 20px;
+}
+header.header,
+footer.footer {
+  border: 1px solid red;
+  /* width: 700px; */
+  margin: 0 auto;
+}

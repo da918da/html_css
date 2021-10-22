@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/contact.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"><img src="./images/logo_img.png" /></a>
+      <a href="#" class="store"><img src="./images/store.svg" /></a>
+      <nav class="nav">
+        <ul class="link_list">
+          <li><a href="./index.html" class="about">關於我</a></li>
+          <li><a href="./contact.html" class="">與我聯繫</a></li>
+          <li>
+            <div class="social_block">
+              社群連結
+              <ul class="social_list">
+                <li><a href="#">FB</a></li>
+                <li><a href="#">Twitter</a></li>
+              </ul> 
+            </div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  
+    </div>
+    <div class="banner"></div>
+
+    <main class="main">
+    <p>與我聯繫</p>
+
+
+    <form class="contact_block" action="#" method="post">
+      <div class="item_block">
+        <label for="email">Email：</label>
+        <input type="text" name="email" id="email" placeholder="請輸入Email" />
+      </div>
+
+    <div class="item_block">
+        <label for="time">希望回覆時間：</label>
+        <div class="reply_block">
+        <div class="radio_block">
+
+            <input type="radio" id="morning" name="time" checked />
+            <label for="morning">上午</label>
+          </div>
+
+          <div class="radio_block">
+            <input type="radio" id="afternoon" name="time" />
+            <label for="afternoon">下午</label>
+          </div>
+
+          <div class="radio_block">
+            <input type="radio" id="night" name="time" />
+            <label for="night">晚上</label>
+          </div>
+        </div>
+      </div>
+
+      <div class="item_block">
+        <label for="notes">事項：</label>
+        <textarea class="notes" id="notes"></textarea>
+      </div>
+
+      <div class="item_block">
+        <label></label>
+        <button type="submit" class="btn_submit">資料送出</button>
+      </div>
+    </form>
+  </main>
+    </body>
+    
+    <footer class="footer">
+      &copy; All Rights Reserved
+    </footer>
+  </body>
+</html>

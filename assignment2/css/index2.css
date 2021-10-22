@@ -1,0 +1,65 @@
+a {
+  color: blue;
+}
+* {
+  /* outline: 1px solid red; */
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  /* display: flex; */
+}
+div.banner {
+  min-width: 768px;
+  min-height: 268px;
+  position: ;
+}
+div.people > img {
+  border: 1px solid red;
+  border-radius: 100%;
+}
+p {
+  font-size: 24px;
+}
+ol.data_content1 {
+  border: 1px solid palevioletred;
+  padding: 0;
+}
+ol.data_content1 > li {
+  border: 1px solid blue;
+  list-style: none;
+  display: inline-block;
+  padding: 5px 10px;
+}
+
+/*grid 失敗*/
+/* div.data {
+  border: 1px solid black;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: 100px 150px 100px;
+  grid-template-areas: "name gender birth" "adress1 adress1 adress2" "autobiography autobiography autobiography";
+}
+
+.data_content1 {
+  border: 1px solid purple;
+}
+
+.data_content1 li.name {
+  grid-area: name;
+}
+.data_content1 li.gender {
+  grid-area: gender;
+}
+.data_content1 li.birth {
+  grid-area: birth;
+}
+.data_content1 li.adress1 {
+  grid-area: adress1;
+}
+.data_content1 li.adress2 {
+  grid-area: adress2;
+}
+.data_content1 li.autobiography {
+  grid-area: autobiography;
+} */

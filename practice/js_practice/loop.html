@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      for (var i = 0; i < 10; i++) {
+        if (i == 3) {
+          console.log("迴圈：" + i);
+          break;
+        }
+        console.log("迴圈：" + i);
+      }
+      console.log("結束迴圈，i 的值：" + i);
+
+      //1-10
+      var a = 0;
+      for (let i = 0; i > 9; i++) {}
+
+      //
+      var cars = ["BMW", "Volvo", "Mini"];
+      var car;
+      for (car of cars) {
+        // console.log(car);
+      }
+      //
+
+      var a = 0;
+      do {
+        console.log(a);
+        a++;
+      } while (a < 3);
+      console.log("end");
+    </script>
+  </body>
+</html>

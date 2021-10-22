@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+}
+.header {
+  border: 1px solid black;
+  width: 768px;
+  font-size: 0;
+  margin: 0 auto;
+}
+.header::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.header a.logo {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+.header a.logo img {
+  height: 50px;
+}
+a.store {
+  display: inline-block;
+  width: 40px;
+  float: right;
+  margin-top: 5px;
+  vertical-align: middle;
+}
+.nav {
+  /* border: 1px solid red; */
+  display: inline-block;
+  vertical-align: middle;
+
+  /* position: absolute;
+  padding-left: 20px; */
+}
+.link_list {
+  margin: 0;
+  padding: 0;
+}
+.link_list > li {
+  display: inline-block;
+  list-style: none;
+}
+.link_list > li > a {
+  text-decoration: none;
+  /* border: 1px solid orange; */
+  display: inline-block;
+  padding: 14px 10px;
+  font-size: 16px;
+  min-width: 100px;
+  text-align: center;
+}
+li > a.about {
+  color: white;
+  background-color: blue;
+}
+
+ul.link_list li > a:hover {
+  color: white;
+  background-color: blue;
+}
+
+ul.social_list li > a:hover {
+  color: white;
+  background-color: black;
+}
+div.social_block {
+  font-size: 16px;
+  min-width: 100px;
+  text-align: center;
+  padding: 14px 10px;
+  position: relative;
+}
+div.social_block ul.social_list {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  list-style: none;
+  right: 0;
+  top: 50px;
+  color: black;
+  background-color: white;
+  min-width: 100px;
+  /* padding: 14px 10px; */
+  display: none;
+}
+div.social_block:hover ul.social_list {
+  display: block;
+}
+div.social_block ul.social_list > li > a {
+  padding: 12px 10px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 100%;
+  position: relative;
+}
+
+.social_list li:first-child a::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  height: 1px;
+  background-color: red;
+}
+
+/* header.header
+    nav.nav
+    ul.link_list
+    > li
+    div.social_block
+    ul.social_list
+    > li
+    a::after {
+    content: "b";
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: ;
+    height: ;
+    background-color: red;
+  } */
+
+/* header.header
+    nav.nav
+    ul.link_list
+    > li
+    div.social_block
+    ul.social_list
+    > li:last-child
+    a::after {
+    height: 0;
+  } */
+
+/* header.header
+    nav.nav
+    ul.link_list
+    > li
+    div.social_block
+    ul.social_list
+    > li
+    a:hover {
+    background-color: black;
+    color: white;
+  } */

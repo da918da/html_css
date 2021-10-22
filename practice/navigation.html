@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>基本導覽列</title>
+  </head>
+  <body>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      .nav {
+        border: 1px solid black;
+      }
+      ul.list {
+        /* border: 1px solid red; */
+        margin: 0;
+        padding: 0;
+      }
+      ul.list > li {
+        display: inline-block;
+        /* border: 1px solid orange; */
+        vertical-align: top;
+      }
+      ul.list > li > a {
+        border: 1px solid green;
+        display: inline-block;
+        text-decoration: none;
+        padding: 5px 10px;
+      }
+
+      ul.list > li > a:hover {
+        background-color: black;
+        color: white;
+      }
+      .social_block {
+        border: 1px solid slateblue;
+        padding: 5px 10px;
+        position: relative;
+      }
+
+      .social_block:hover .social_list {
+        display: block;
+      }
+
+      .social_block > .social_list {
+        /* border: 1px solid slateblue; */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 32px;
+        right: 0;
+        width: 100%;
+        display: none;
+      }
+      .social_list > li {
+        /* border: 1px solid red; */
+      }
+
+      .social_list > li > a {
+        text-decoration: none;
+        border: 1px solid black;
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
+      .social_list > li > a:hover {
+        background-color: black;
+        color: white;
+      }
+    </style>
+  </body>
+  <nav class="nav">
+    <ul class="list">
+      <li>
+        <a href="#">商品頁面</a>
+      </li>
+      <li>
+        <a href="#">聯絡我們</a>
+      </li>
+      <li>
+        <div class="social_block">
+          <!--本身是自選單沒有連結-->
+          社群連結
+          <ul class="social_list">
+            <li>
+              <a href="#">FB</a>
+            </li>
+            <li>
+              <a href="#">IG</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</html>

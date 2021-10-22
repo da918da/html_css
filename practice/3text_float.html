@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        /* outline: 1px solid red; */
+        box-sizing: border-box;
+      }
+      .article {
+        border: 1px solid blue;
+        width: 300px;
+        padding: 10px;
+      }
+      .article a.img_block {
+        border: 1px solid #ccc;
+        width: 180px;
+        display: block;
+        float: left;
+        text-decoration: none;
+        margin-right: 5px;
+      }
+
+      span.img_text {
+        font-size: 0.8rem;
+        color: #ccc;
+        border: 1px solid gray;
+        margin-top: 5px;
+      }
+      .article a.img_block img {
+        width: 100%;
+      }
+      div.content {
+        border: 1px solid green;
+      }
+      div.content h1 {
+        border: 1px solid red;
+        margin: 0;
+        text-align: center;
+        font-size: 1.2rem;
+      }
+      p {
+        margin: 0;
+        border: 1px solid yellow;
+        font-size: 12px;
+      }
+      .article::after {
+        content: "";
+        /* border: 1px solid red; */
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>文繞圖</h1>
+    <article class="article">
+      <a href="#" class="img_block">
+        <img src="./image/lion.jpeg" />
+        <span class="img_text">我是蘋果的連結描述</span>
+      </a>
+      <div class="content">
+        <h1>lion pic</h1>
+        <p>
+          velitnobismodirepudiandaeullam accusantiumLorem ipsum dolor,sit amet
+          consectetur adipisicing elit. Ea voluptatum sit quisquam
+          velitnobismodirepudiandae ullam accusantium aut voluptas. Impedit
+          rerum non tenetur deleniti sequi! Omnis veritatis sequi libero.
+        </p>
+        <p>
+          描述描述描述描述描描述描述描述描述描描述描述描述描述描描述描述描述描述描描述描述描述描述描描述描述描述描述描描述描述描述描述描描述描述描述描述描
+        </p>
+      </div>
+    </article>
+  </body>
+</html>

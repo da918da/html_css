@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/backgroung.css" />
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        /*整張大張背景圖放body
+        /* background-image: url("https://alldata.sgp1.digitaloceanspaces.com/images/christmas-dark.png"); */
+        background-image: url("./image/christmas-dark.png");
+      }
+      div.place {
+        background-image: url("./image/lion.jpeg");
+        width: 300px;
+        height: 300px;
+        border: 10px solid hsla(240, 50%, 50%, 0.5); /*hsla透明度*/
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-size: contain; /*contain圖片本身不會被遮到 | cover 會蓋到*/
+        /* 水平方向;置中center 垂直：上方top */
+        background-position: center center;
+        /* 另外一種寫法px */
+        /* background-position: 20px 50px; */
+        background-attachment: scroll;
+
+        padding: 10px;
+        background-origin: content-box;
+        /*從content-box區域開始*/ /*border-box | content-box*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="place">這是div的內容</div>
+  </body>
+</html>

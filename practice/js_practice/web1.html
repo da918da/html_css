@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="#" method="#">
+      <input type="text" id="item1" placeholder="單價" />
+      <input type="text" id="item2" placeholder="數量" />
+      <button type="button" id="btn">按鈕</button>
+    </form>
+
+    <br />
+    <p>結果：<span id="result"></span></p>
+    <script src="../js/funcs.js"></script>
+    <script>
+      // document.addEventListener("DOMContentLoaded", function () {
+      //   var the_btn = document.getElementById("btn");
+      //   // console.log(the_btn);
+      //   the_btn.addEventListener("click", function () {
+      //     //   alert("test");
+      //     var a = document.getElementById("item1");
+      //     var b = document.getElementById("item2");
+      //     //   console.log(typeof b.value);
+      //     var result = parseInt(a.value) * parseInt(b.value); //加parseInt 才會是1+2=3
+      //     //   console.log(result);
+      //     var result_el = document.getElementById("result");
+      //     result_el.innerHTML = result;
+      //     console.log(result_el);
+      //   });
+      // });
+
+      //   方式二
+      //   the_btn.onclick = function () {
+      //     alert("test");
+      //   };
+
+      //陣列上課
+
+      var a = [1, 2, "其它文字", "test"];
+      // console.log(a[a.length - 1]); //"test"
+      // console.log(a[1]);
+      // console.log(a[2]);
+      // console.log(a[3]);
+
+      //資料全部印出來
+
+      var students_score = [50, 30, 87, 99, 71, 78];
+      var avg_result1 = array_avg(students_score);
+
+      var students_score2 = [50, 30, 87, 99, 71, 78, 100];
+      var avg_result2 = array_avg(students_score2);
+
+      console.log(avg_result1);
+      console.log(avg_result2);
+    </script>
+  </body>
+</html>

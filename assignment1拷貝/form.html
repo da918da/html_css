@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="http://notes.carlos-studio.com/ex.php" method="get">
+      <label for="username">帳號：</label>
+      <input type="text" name="username" id="username" /><br />
+
+      <label for="password">密碼：</label>
+      <input type="password" name="password" id="password" /><br />
+
+      <label>飲食：</label>
+      <input type="radio" name="foodtype" id="option1" value="葷" />
+      <label for="option1">葷</label>
+      <input type="radio" name="foodtype" id="option2" value="素" />
+      <label for="option2">素</label><br />
+
+      <label>人數：</label>
+      <select>
+        <option value="1">1位</option>
+        <option value="2">2位</option>
+        <option value="3">3位</option></select
+      ><br />
+
+      <label>興趣：</label>
+
+      <input type="checkbox" name="habits[]" id="exercise" value="運動" />
+      <label for="exercise">運動</label>
+
+      <input type="checkbox" name="habits[]" id="travel" value="旅遊" />
+      <label for="travel">旅遊</label>
+
+      <input type="checkbox" name="habits[]" id="movie" value="電影" />
+      <label for="movie">電影</label><br />
+
+      <!--textarea 框框之意  -->
+      <label for="">其他事項：</label><br />
+      <textarea name="notes"></textarea><br />
+
+      <button type="submit">送出資料</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,79 @@
+@import "./header.css";
+@import "./all.css";
+@import "./footer.css";
+@import "./banner.css";
+* {
+  box-sizing: border-box;
+  /* border: 1px solid green; */
+}
+
+.main_container {
+  border: 1px solid red;
+  width: 768px;
+  margin: 0 auto;
+  position: relative;
+  /* font-size: 0; */
+}
+
+.aside,
+.main {
+  display: inline-block; /*不懂*/
+  box-sizing: border-box;
+}
+
+aside.aside {
+  border: 1px solid blue;
+  width: 194px;
+  text-align: center;
+  margin-right: 20px;
+}
+
+div.people_block {
+  position: relative;
+  top: -75px;
+}
+div.img_block {
+  border: 1px solid green;
+  border-radius: 50%;
+  overflow: hidden;
+  font-size: 0;
+  width: 150px;
+  display: inline-block;
+  /* position: absolute; */
+}
+div.img_block img {
+  max-width: 100%;
+}
+main.main {
+  border: 1px solid purple;
+  width: calc(100% - 200px - 20px);
+  vertical-align: top;
+  padding-bottom: 50px;
+
+  /* position: absolute;
+  top: 33px;
+  right: 0; */
+  /* position: absolute;
+  top: 390px; */
+}
+.aside,
+.main {
+  display: inline-block;
+}
+table.table {
+  /* border: 1px solid yellow; */
+  width: 100%;
+  margin-bottom: 100px;
+  border-collapse: collapse;
+}
+.table td {
+  border: 1px solid black;
+  padding: 10px;
+}
+h1.title {
+  font-size: 1.5rem;
+  padding: 10px 0;
+}
+ul.expirence > li {
+  margin-bottom: 10px;
+}

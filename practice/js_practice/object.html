@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var car = {
+        price: 10000,
+        doors: 5,
+        color: "white",
+        drive: function () {
+          console.log("drive");
+        },
+      };
+      //很多物件的 增加寫法有. []
+      car.brand = "benz";
+      car["brand2"] = "smart";
+      console.log(car);
+    </script>
+  </body>
+</html>
