@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .group {
+        border: 1px solid blue;
+      }
+
+      ul.cursor_2_1 {
+        border: 1px solid red;
+        padding: 0;
+      }
+      ul.cursor_2_1 > li {
+        list-style: none;
+        display: inline-block;
+        width: 100px;
+        height: 150px;
+        background-color: #eee;
+        margin-bottom: 10px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 150px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS 2.1 游標</h1>
+    <div class="group">
+      <ul class="cursor_2_1">
+        <li class="default">default</li>
+        <li class="crosshair">crosshair</li>
+        <li class="help">help</li>
+        <li class="move">move</li>
+        <li class="pointer">pointer</li>
+        <li class="progress">progress</li>
+        <li class="text">text</li>
+        <li class="wait">wait</li>
+        <li class="e-resize">e-resize</li>
+        <li class="ne-resize">ne-resize</li>
+        <li class="nw-resize">nw-resize</li>
+        <li class="n-resize">n-resize</li>
+        <li class="se-resize">se-resize</li>
+        <li class="sw-resize">sw-resize</li>
+        <li class="s-resize">s-resize</li>
+        <li class="w-resize">w-resize</li>
+      </ul>
+    </div>
+
+    <h1>CSS 3 游標</h1>
+
+    <ul class="cursor_3">
+      <li class="none">none</li>
+      <li class="context-menu">context-menu</li>
+      <li class="cell">cell</li>
+      <li class="vertical-text">vertical-text</li>
+      <li class="alias">alias</li>
+      <li class="copy">copy</li>
+      <li class="no-drop">no-drop</li>
+      <li class="not-allowed">not-allowed</li>
+      <li class="ew-resize">ew-resize</li>
+      <li class="ns-resize">ns-resize</li>
+      <li class="nesw-resize">nesw-resize</li>
+      <li class="nwse-resize">nwse-resize</li>
+      <li class="col-resize">col-resize</li>
+      <li class="row-resize">row-resize</li>
+      <li class="all-scroll">all-scroll</li>
+      <li class="zoom-in">zoom-in</li>
+      <li class="zoom-out">zoom-out</li>
+    </ul>
+  </body>
+</html>

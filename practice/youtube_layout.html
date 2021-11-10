@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+      }
+      img {
+        max-width: 100%; /*最大不要超出父元素 */
+      }
+      :root {
+        /* font-size: 62.5%; 頁面上所有文字變小  62.5%=10px */
+        --header-heigth: 60px; /*變數上的宣告 */
+        --aside-width: 240px;
+      }
+      button.btn_hamburger {
+        display: none;
+      }
+      @media (max-width: 767.98px) {
+        button.btn_hamburger {
+          display: inline-block;
+        }
+      }
+
+      /* ====== header區域 ======*/
+      .header {
+        border: 1px solid red;
+        width: 100%;
+        height: var(--header-heigth); /*善用上方的變數 */
+        background-color: lightgray;
+        position: sticky;
+        top: 0;
+      }
+
+      /* ====== aside區域 ======*/
+      .aside {
+        border: 1px solid blue;
+        position: fixed; /*main變成在aside後方 */
+        background-color: #fee094;
+        left: 0%;
+        top: var(--header-heigth);
+        width: var(--aside-width);
+        height: calc(100% - var(--header-heigth));
+        overflow-y: auto;
+        padding: 20px 0;
+        transition: all 1s;
+      }
+      @media (max-width: 767.98px) {
+        aside.aside {
+          top: 0;
+          height: 100%;
+          transform: translateX(-100%);
+        }
+        aside.aside.-on {
+          transform: translateX(0%);
+        }
+      }
+
+      aside.aside nav.nav {
+        /* border: 1px solid black; */
+      }
+      aside.aside nav.nav ul.nav_list {
+        /* border: 1px solid purple; */
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      aside.aside nav.nav ul.nav_list > li {
+        /* border: 1px solid green; */
+      }
+      aside.aside nav.nav ul.nav_list > li > a {
+        /* border-bottom: 1px solid blue; */
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        padding: 5px 0;
+        position: relative;
+      }
+      /* 製作下方的紅線 */
+      aside.aside nav.nav ul.nav_list > li > a::after {
+        content: "";
+        /* border: 1px solid red; */
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        width: 95%;
+        transform: translateX(-50%);
+        background-color: red;
+        height: 1px;
+      }
+      aside.aside nav.nav ul.nav_list > li:last-child > a::after {
+        display: none;
+      }
+
+      /* ====== main區域 ======*/
+      .main {
+        border: 1px solid green;
+        /* height: 1000px; */
+        background-color: lightblue;
+        width: calc(100% - var(--aside-width));
+        margin-left: var(--aside-width);
+        min-height: calc(100vh - var(--header-heigth));
+        padding: 20px;
+        transition: all 1s;
+
+      }
+      @media (max-width: 767.98px) {
+        main.main {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+      main.main ul.item_list {
+        border: 1px solid green;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+      }
+      main.main ul.item_list > li {
+        border: 1px solid red;
+        width: calc((100% - 60px) / 4);
+        margin-right: 20px;
+        margin-bottom: 20px;
+      }
+      @media (max-width: 767.98px) {
+        main.main ul.item_list > li {
+          width: calc((100% - 20px) / 2);
+        }
+      }
+      main.main ul.item_list > li:nth-child(4n) {
+        margin-right: 0;
+      }
+      @media (max-width: 767.98px) {
+        main.main ul.item_list > li:nth-child(2n) {
+            margin-right: 0;
+        }
+      main.main ul.item_list > li > a {
+        border: 1px solid blue;
+        display: block;
+        text-decoration: none;
+      }
+      main.main ul.item_list > li > a div.img_block {
+        border: 1px solid orange;
+        font-size: 0; /*消圖片縫隙 */
+      }
+      main.main ul.item_list > li > a span.item_text {
+        border: 1px solid blue;
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      這是header
+      <button type="button" class="btn_hamburger">按鈕</button>
+    </header>
+
+    <aside class="aside">
+      <nav class="nav">
+        <button type="button" class="btn_hamburger">按鈕</button>
+        <ul class="nav_list">
+          <li><a href="#>連結一</a></li>
+          <li><a href="#">連結二</a></li>
+          <li><a href="#">連結三</a></li>
+          <li><a href="#">連結四</a></li>
+          <li><a href="#">連結一</a></li>
+          <li><a href="#">連結二</a></li>
+          <li><a href="#">連結三</a></li>
+          <li><a href="#">連結四</a></li>
+          <li><a href="#">連結一</a></li>
+          <li><a href="#">連結二</a></li>
+          <li><a href="#">連結三</a></li>
+          <li><a href="#">連結四</a></li>
+          <li><a href="#">連結一</a></li>
+          <li><a href="#">連結二</a></li>
+          <li><a href="#">連結三</a></li>
+          <li><a href="#">連結四</a></li>
+          <li><a href="#">連結一</a></li>
+          <li><a href="#">連結二</a></li>
+          <li><a href="#">連結三</a></li>
+          <li><a href="#">連結四</a></li>
+          <li><a href="#">連結一</a></li>
+          <li><a href="#">連結二</a></li>
+          <li><a href="#">連結三</a></li>
+          <li><a href="#">連結四</a></li>
+          <li><a href="#">連結一</a></li>
+          <li><a href="#">連結二</a></li>
+          <li><a href="#">連結三</a></li>
+          <li><a href="#">連結四</a></li>
+          <li><a href="#">連結一</a></li>
+          <li><a href="#">連結二</a></li>
+          <li><a href="#">連結三</a></li>
+          <li><a href="#">連結四</a></li>
+          <li><a href="#">連結一</a></li>
+          <li><a href="#">連結二</a></li>
+          <li><a href="#">連結三</a></li>
+          <li><a href="#">連結四</a></li>
+          <li><a href="#">連結一</a></li>
+          <li><a href="#">連結二</a></li>
+          <li><a href="#">連結三</a></li>
+          <li><a href="#">最後連結</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <ul class="item_list">
+        <li>
+          <a href="#">
+            <div class="img_block">
+              <img src="https://via.placeholder.com/400x300" />
+            </div>
+            <span class="item_text">1這是影片標題這是影片標題這是影片標題</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="img_block">
+              <img src="https://via.placeholder.com/400x300" />
+            </div>
+            <span class="item_text">2這是影片標題這是影片標題這是影片標題</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="img_block">
+              <img src="https://via.placeholder.com/400x300" />
+            </div>
+            <span class="item_text">3這是影片標題這是影片標題這是影片標題</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="img_block">
+              <img src="https://via.placeholder.com/400x300" />
+            </div>
+            <span class="item_text">4這是影片標題這是影片標題這是影片標題</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="img_block">
+              <img src="https://via.placeholder.com/400x300" />
+            </div>
+            <span class="item_text">5這是影片標題這是影片標題這是影片標題</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img_block">
+              <img src="https://via.placeholder.com/400x300" />
+            </div>
+            <span class="item_text">6這是影片標題這是影片標題這是影片標題</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img_block">
+              <img src="https://via.placeholder.com/400x300" />
+            </div>
+            <span class="item_text">7這是影片標題這是影片標題這是影片標題</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img_block">
+              <img src="https://via.placeholder.com/400x300" />
+            </div>
+            <span class="item_text">8這是影片標題這是影片標題這是影片標題</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img_block">
+              <img src="https://via.placeholder.com/400x300" />
+            </div>
+            <span class="item_text">9這是影片標題這是影片標題這是影片標題</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img_block">
+              <img src="https://via.placeholder.com/400x300" />
+            </div>
+            <span class="item_text"
+              >10這是影片標題這是影片標題這是影片標題</span
+            >
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <div class="img_block">
+              <img src="https://via.placeholder.com/400x300" />
+            </div>
+            <span class="item_text"
+              >11這是影片標題這是影片標題這是影片標題</span
+            >
+          </a>
+        </li>
+      </ul>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        var btn_el = document.getElementsByClassName("btn_hamburger");
+        for(let i = 0; i < btn_el.length; i++){
+            btn_el[i].addEventListener("click", function(){
+                console.log("test");
+                var aside_el = document.getElementsByClassName("aside")[0];
+                aside_el.classList.toggle("-on");
+            });
+          
+        }
+        /* $("button.btn_hamburger").on("click", function(){
+            $("aside.aside").toggleClass("-on");
+        }) */
+        </script>
+  </body>
+</html>
